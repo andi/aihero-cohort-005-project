@@ -72,7 +72,14 @@ function NoteStatus({
   note: SavedNote;
 }) {
   if (error) return <span className="text-sm text-destructive">{error}</span>;
-  if (draft.dirty && !draft.empty) {
+  if (draft.dirty && draft.empty) {
+    return (
+      <span className="text-xs text-muted-foreground">
+        Write something before saving your note.
+      </span>
+    );
+  }
+  if (draft.dirty) {
     return (
       <span className="text-xs text-muted-foreground">Unsaved changes</span>
     );
