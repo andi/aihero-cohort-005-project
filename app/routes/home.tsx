@@ -240,8 +240,10 @@ function StatGrid({ stats }: { stats: LandingStats }) {
           <div className="mb-4 flex size-10 items-center justify-center rounded-lg bg-primary/10">
             <Icon className="size-5 text-primary" />
           </div>
-          <dd className="text-3xl font-bold tracking-tight">{value}</dd>
-          <dt className="mt-1 text-sm text-muted-foreground">{label}</dt>
+          <div className="flex flex-col-reverse">
+            <dt className="mt-1 text-sm text-muted-foreground">{label}</dt>
+            <dd className="text-3xl font-bold tracking-tight">{value}</dd>
+          </div>
         </div>
       ))}
     </dl>
