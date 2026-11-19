@@ -152,7 +152,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                 Featured Courses
               </h2>
               <p className="mt-2 text-muted-foreground">
-                Start learning with our most popular courses
+                Start learning with our newest courses
               </p>
             </div>
             <Button asChild variant="outline">
